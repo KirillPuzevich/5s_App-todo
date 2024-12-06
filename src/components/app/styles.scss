@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html,
+body {
+    font-family: "Raleway", sans-serif;
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+    background-color: #1a1c21;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
+    background-color: #1a1c21;
+}
+
+main.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img {
+    width: 100%;
+}

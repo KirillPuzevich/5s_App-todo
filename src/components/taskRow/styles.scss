@@ -1,0 +1,119 @@
+.task__row {
+    &-item {
+        border: 1px solid #444;
+        padding: 10px;
+        text-align: left;
+        color: #fff;
+        background-color: rgb(36, 36, 38);
+        word-break: break-all;
+
+        &:nth-child(2) {
+            width: 45%;
+        }
+
+        &:nth-child(5) {
+            width: 21%;
+        }
+
+        &:hover {
+            background-color: rgb(50, 53, 55);
+        }
+    }
+
+    &-button {
+        color: #fff;
+        margin: 0 5px;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &_edit {
+            background-color: #4caf50;
+
+            &:hover {
+                background-color: #45a049;
+            }
+        }
+
+        &_delete {
+            margin-top: 5px;
+            background-color: #f44336;
+            padding: 10px 30px;
+
+            &:hover {
+                background-color: #d32f2f;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .task__row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        background-color: rgb(36, 36, 38);
+        border: 1px solid #444;
+        padding: 10px;
+
+        &-container {
+            display: flex;
+        }
+
+        &-item {
+
+            &.actions {
+                display: flex;
+                align-items: center;
+            }
+
+            &:nth-child(2) {
+                width: 100%;
+            }
+
+            &:nth-child(5) {
+                width: 100%;
+            }
+
+
+            &::before {
+                content: attr(data-label);
+                font-weight: bold;
+                margin-right: 10px;
+            }
+        }
+
+        &-button {
+            font-size: 10px;
+            padding: 10px;
+
+            &_delete {
+                margin-top: 0px;
+                padding: 10px 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .task__row {
+
+        font-size: 12px;
+        padding: 8px;
+
+        &-container {
+            display: flex;
+        }
+
+        &-button {
+            font-size: 8px;
+            padding: 8px;
+
+            &_delete {
+                margin-top: 0px;
+                padding: 8px 25px;
+            }
+        }
+    }
+}

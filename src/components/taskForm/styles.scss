@@ -1,0 +1,71 @@
+.task__form {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgb(36, 36, 38);
+
+  &-title {
+    margin-bottom: 15px;
+    color: #fff;
+  }
+
+  &-input,
+  &-select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgb(50, 53, 55);
+
+    &:focus {
+      border-color: black;
+      outline: none;
+      box-shadow: 0 0 5px rgba(12, 12, 33, 0.5);
+    }
+
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  &-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &_submit {
+      background-color: #4caf50;
+      color: white;
+
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .task__form {
+
+    &-title {
+      font-size: 14px;
+    }
+
+    &-input,
+    &-select {
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    &-button {
+      padding: 8px 13px;
+      font-size: 14px;
+    }
+  }
+}
