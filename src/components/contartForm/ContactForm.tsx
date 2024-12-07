@@ -20,7 +20,6 @@ export const ContactForm = () => {
     setMessage(e.target.value);
   };
 
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -32,7 +31,9 @@ export const ContactForm = () => {
 
     console.log("Сообщение с формы:", JSON.stringify(formData));
 
-    navigate('/')
+    alert("Сообщение успешно отправлено!");
+
+    navigate('/');
 
     setName('');
     setEmail('');
